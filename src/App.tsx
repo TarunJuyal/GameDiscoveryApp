@@ -7,6 +7,7 @@ import PlatformSelector from "./components/PlatformSelector";
 import { GameQuery } from "./models";
 import SortSelector from "./components/SortSelector";
 import GameHeading from "./components/GameHeading";
+import GenreDrawer from "./components/GenreDrawer";
 
 function App() {
   const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
@@ -25,6 +26,8 @@ function App() {
       <GridItem area="nav">
         <Navbar
           onSearch={(searchText) => setGameQuery({ ...gameQuery, searchText })}
+          gameQuery={gameQuery}
+          setGameQuery={setGameQuery}
         />
       </GridItem>
       <Show above="lg">
