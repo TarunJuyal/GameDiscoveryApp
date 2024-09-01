@@ -28,8 +28,8 @@ const GenreDrawer = ({ setGameQuery, gameQuery }: Props) => {
         color="teal"
         onClick={onOpen}
         children={<MdMenu />}
-        boxSize={{ base: "50px", md: "60px" }}
-        marginTop={5}
+        boxSize={{ base: "40px", md: "60px" }}
+        marginTop={3}
       />
       <Drawer
         isOpen={isOpen}
