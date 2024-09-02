@@ -26,8 +26,16 @@ export interface Genre {
 }
 
 export interface GameQuery {
-  genre: Genre | null;
-  platform: Platform | null;
-  sortOrder: string;
-  searchText: string;
+  genre?: Genre | null;
+  platform?: Platform | null;
+  sortOrder?: string;
+  searchText?: string;
+}
+
+export interface GameQueryStore {
+  gameQuery: GameQuery;
+  setSearchText: (searchText: string) => void;
+  setGenre: (genre: Genre) => void;
+  setPlatform: (searchText: Platform) => void;
+  setSortOrder: (searchText: string) => void;
 }
