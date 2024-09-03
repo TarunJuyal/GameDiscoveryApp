@@ -7,14 +7,14 @@ const ClearFilterButton = () => {
   );
   const setSearchText = useGameQueryStore((s) => s.setSearchText);
 
+  const clear = () => {
+    searchText ? setSearchText(searchText) : setSearchText("");
+  };
+
   return genre || platform || sortOrder ? (
-    <Tag
-      size="sm"
-      borderRadius="full"
-      onClick={searchText ? () => setSearchText(searchText) : undefined}
-    >
+    <Tag size="sm" borderRadius="full">
       <TagLabel>Reset Filters</TagLabel>
-      <TagCloseButton />
+      <TagCloseButton onClick={clear} />
     </Tag>
   ) : null;
 };
